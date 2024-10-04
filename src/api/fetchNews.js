@@ -10,12 +10,13 @@ export default async function fetchNews(){
 
    
     try {
+
+        console.log( ` testing : ${BASE_URL}?sources=techcrunch&apiKey=${API_KEY}`);
+
         const {data}=await axios.get(`${BASE_URL}`,{
             params:{
                 sources:'techcrunch',
-                apiKey: API_KEY
-
-                
+                apiKey: API_KEY    
             }
         })
         return data
