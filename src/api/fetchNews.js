@@ -19,8 +19,9 @@ export default async function fetchNews(){
                 apiKey: API_KEY    
             },
             headers: {
-                'Connection': 'keep-alive'
-            }
+                'User-Agent': 'react-super-app',
+              },
+        
         })
         return data
     } catch (error) {
