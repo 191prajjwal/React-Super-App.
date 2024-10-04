@@ -17,6 +17,9 @@ export default async function fetchNews(){
             params:{
                 sources:'techcrunch',
                 apiKey: API_KEY    
+            },
+            headers: {
+                'Connection': 'keep-alive'
             }
         })
         return data
