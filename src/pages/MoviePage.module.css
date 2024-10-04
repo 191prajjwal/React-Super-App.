@@ -1,0 +1,47 @@
+.container{
+    padding:20px;
+    width:100%;
+    height:100%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  
+   
+}
+
+.header img{
+    width:60px;
+    box-sizing: border-box;
+    position: fixed;
+    right:20px;
+    z-index:100 ;
+    background-color: #7330b1;
+    border-radius: 50px;
+    padding:3px;
+    transition :transform 0.2s;
+}
+
+.header h1{
+    color:#72DB73;
+    font-family: single Day;
+    margin-bottom: 20px;
+  
+}
+
+.movieList{
+    display: flex;
+    flex-direction: column;
+    margin-left:20px;
+}
+
+.genreName{
+    color:rgb(174, 175, 176)
+}
+
+
+
+
+
