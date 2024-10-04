@@ -17,12 +17,10 @@ export default async function fetchNews(){
             params:{
                 sources:'techcrunch',
                 apiKey: API_KEY    
-            },
-            headers: {
-                'User-Agent': 'react-super-app',
-              },
+            }
         
         })
+        console.log(data)
         return data
     } catch (error) {
         console.error(error)
