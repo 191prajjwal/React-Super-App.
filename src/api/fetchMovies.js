@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL= 'https://api.themoviedb.org/3/discover/movie'
+const BASE_URL= "https://api.themoviedb.org/3/discover/movie"
 
 const API_KEY = import.meta.env.VITE_MOVIES_API_KEY
 
