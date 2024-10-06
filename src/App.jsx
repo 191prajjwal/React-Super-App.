@@ -17,21 +17,26 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/" element= <ProtectedRoutes>
-          <GenrePage/>
+         <Dashboard/>
         </ProtectedRoutes>/>
+
         <Route path="/register" element={<RegisterPage/>}/>
         <Route path="/genres" element=<ProtectedRoutes>
           <GenrePage/>
         </ProtectedRoutes>/>
+
         <Route path="/carousel" element=<ProtectedRoutes>
         <CarouselPage/>
       </ProtectedRoutes>/>
+
         <Route path="/dashboard" element=<ProtectedRoutes>
         <Dashboard/>
       </ProtectedRoutes>/>
+
         <Route path="/movies" element=<ProtectedRoutes>
         <MoviePage/>
       </ProtectedRoutes>/>
+      
         <Route path="*" element={<NotFoundPage/>}/>
         {/* if no page matches any above page the route will be this */}
       </Routes>

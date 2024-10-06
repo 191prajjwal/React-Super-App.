@@ -5,6 +5,16 @@ import { Navigate } from 'react-router-dom';
 
 export default function ProtectedRoutes({children}) {
 
-const {user}= useContext(AppContext)
+    const {user,selectedGenres}= useContext(AppContext)
+console.log(children.type.name)
+
+if(children.type.name==="Dashboard" || children.type.name==="CarouselPage" || children.type.name==="MoviePage" )
+{
+    
+    return user && selectedGenres && selectedGenres.length>=3? children :!user? <Navigate to ="/register"/> : <Navigate to ="/genres"/>
+
+}
+
+else
 return user? children : <Navigate to ="/register"/>
 }
