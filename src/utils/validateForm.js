@@ -1,4 +1,4 @@
-export default function validateForm(name,email,username,mobile){
+export default function validateForm(name,email,username,mobile,isChecked){
 
     let valid=true;
     //if any filed is false it means it is not invalid and if it is true it means it is invalid 
@@ -6,18 +6,20 @@ export default function validateForm(name,email,username,mobile){
         name:false,
         email:false,
         username:false,
-        mobile:false
+        mobile:false,
+        isChecked:false
 
     }
-    console.log(name,email,username,mobile)
+    console.log(name,email,username,mobile,isChecked)
 
     //to validate empty inputs fields
-    if(!name || !email || !username || !mobile)
+    if(!name || !email || !username || !mobile || !isChecked)
     {   valid = false
         invalid.name=!name,
         invalid.email=!email,
         invalid.username=!username,
-        invalid.mobile=!mobile
+        invalid.mobile=!mobile,
+        invalid.isChecked=!isChecked
 
         console.log("all fields are mandatory but some fields are missing")
 

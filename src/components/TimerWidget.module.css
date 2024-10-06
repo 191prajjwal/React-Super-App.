@@ -11,8 +11,8 @@
 
 
 .left{
-     width:180px;
-     height:180px;
+     width:160px;
+     height:160px;
     font-size: 0.3rem;
     color:white;
     box-shadow: 0px 6px 26px 0px #0000009C inset, -3px -7px 16px 0px #5F58583B;
@@ -21,6 +21,7 @@
     display:flex;
     background: #191E39;
     flex-direction: column;
+  
 }
 
 
@@ -70,7 +71,7 @@
     border-radius: 20px;
     padding:5px;
     width:85%;
-    margin: 20px auto;
+    margin: 10px auto;
     color: white;
     font-size:1rem;
     cursor: pointer;

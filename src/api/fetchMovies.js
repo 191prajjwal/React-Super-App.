@@ -14,7 +14,7 @@ async function fetchMoviesByGenre(genereID){
                 with_genres:genereID,
                 language:"en-US",
                 page:1,
-                sort_by:"popularity.desc"
+                sort_by:"popularity.desc",
 
             }
         })

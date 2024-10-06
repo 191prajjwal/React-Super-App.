@@ -236,6 +236,53 @@ justify-content: flex-end;
     height:100px
   }
 
+
+  .defaultGenres :nth-child(1){
+    
+    background-size: 80px;
+    background-position: 5.3px 40px;
+  }
+  .defaultGenres :nth-child(2){
+      
+    background-size: 80px;
+    background-position: 5.3px 40px;
+  }
+  .defaultGenres :nth-child(3){
+      
+    background-size: 80px;
+    background-position: 5.3px 40px;
+  }
+  .defaultGenres :nth-child(4){
+      
+    background-size: 70px;
+    background-position: 10.3px 30px;
+  }
+  .defaultGenres :nth-child(5){
+      
+    background-size: 80px;
+    background-position: 5.3px 40px;
+  }
+  .defaultGenres :nth-child(6){
+      
+    background-size: 80px;
+    background-position: 5.3px 40px;
+  }
+  .defaultGenres :nth-child(7){
+      
+    background-size: 80px;
+    background-position: 5.3px 40px;
+  }
+  .defaultGenres :nth-child(8){
+      
+    background-size: 80px;
+    background-position: 5.3px 40px;
+  }
+  .defaultGenres :nth-child(9){
+      
+    background-size: 80px;
+    background-position: 5.3px 40px; 
+  }
+
   
 }
 

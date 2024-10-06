@@ -5,8 +5,13 @@ import WeatherWidget from './../components/WeatherWidget';
 import NewsWidget from './../components/NewsWidget';
 import TimerWidget from '../components/TimerWidget';
 import NotesWidget from '../components/NotesWidget';
+import { useNavigate } from 'react-router-dom';
+
+
 
 export default function Dashboard() {
+
+	const navigate = useNavigate()
   return (
 <div className={styles.container}>
 
@@ -18,9 +23,7 @@ export default function Dashboard() {
 	<div className={styles.timerWidget}><TimerWidget/></div>
 	<div className={styles.notesWidget}><NotesWidget/></div>
 	<div className={styles.newsWidget}><NewsWidget/></div>
-
-
-    
+     <button className={styles.btn} onClick={()=>navigate("/movies")}>Browse</button>
 
 </div>
   )

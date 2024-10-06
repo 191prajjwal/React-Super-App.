@@ -4,8 +4,9 @@
 	grid-template-columns: repeat(3, 1fr);
 	gap: 0;
 	height: 100vh;
-    padding:50px;
+    padding:70px;
     gap:20px 40px;
+    position: relative;
    
     
 }
@@ -42,6 +43,26 @@
 
 }
 
+.btn{
+	padding:10px 50px;
+	border-radius: 15px;
+background-color: #72DB73;
+border:none;
+color:white;
+font-weight: bold;
+position: absolute;
+bottom:25px;
+right:10%;
+transition: transform 0.18s;
+
+&:hover{
+	transform:scale(0.9);
+	background-color: #1a691b;
+}
+
+
+
+}
 
 
 

@@ -1,14 +1,8 @@
 import styles from './Form.module.css'
-import React, { useState } from 'react'
 
 
-
-export default function Form({name,setName,username,setUserName,email,setEmail,mobile,setMobile,error,setError,handleSubmit}) {
+export default function Form({name,setName,username,setUserName,email,setEmail,mobile,setMobile,error,handleSubmit,isChecked,setIsChecked}) {
  
-    
-
-   
-   
 
   return (
     <div className={styles.container} >
@@ -49,7 +43,14 @@ export default function Form({name,setName,username,setUserName,email,setEmail,m
 
            <div className={styles.checkbox}>
            <input type="checkbox"
-            /> <span>Share my registration data with Superapp</span>
+                  checked={isChecked}
+                  onChange={(e)=>
+                    setIsChecked(e.target.checked)
+                  }
+              
+            /> <label>Share my registration data with Superapp</label>
+
+            {error?.isChecked && <p className={styles.error}>Kindly check this box to proceed</p>}
            </div>
 
            <button>SIGN UP</button>

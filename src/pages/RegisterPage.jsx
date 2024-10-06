@@ -1,5 +1,5 @@
 import styles from "./RegisterPage.module.css";
-import { useContext,useState } from "react";
+import { useContext,useEffect,useState } from "react";
 import { AppContext } from "../context/AppContext";
 import { Link, useNavigate } from "react-router-dom";
 import Form from "../components/Form";
@@ -13,16 +13,18 @@ export default function RegisterPage() {
   const [username,setUserName]= useState(user?.username)
   const [email,setEmail]= useState(user?.email)
   const [mobile,setMobile]= useState(user?.mobile)
+  const[isChecked,setIsChecked]=useState(false)
   const [error,setError]= useState({})
-  //checkbox logic
+  
+ 
 
-//navigate
+
 const navigate= useNavigate()
 
-  //submit handler
+
   function handleSubmit(e){
     e.preventDefault()
-     const{valid,invalid}=validateForm(name,email,username,mobile)
+     const{valid,invalid}=validateForm(name,email,username,mobile,isChecked)
 
     
      if(!valid)
@@ -32,15 +34,15 @@ const navigate= useNavigate()
      }
     
         setError(null)
-      setUser({name,email,username,mobile})
+      setUser({name,email,username,mobile,isChecked})
       navigate('/genres')
-       
-    
-
-
-   
+      
 
   }
+
+
+
+ 
 
   return (
    
@@ -70,6 +72,8 @@ const navigate= useNavigate()
             setUserName={setUserName}
             mobile={mobile}
             setMobile={setMobile}
+            isChecked={isChecked}
+            setIsChecked={setIsChecked}
             error={error}
             setError={setError}
             handleSubmit={handleSubmit}

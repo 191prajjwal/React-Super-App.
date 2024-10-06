@@ -20,12 +20,25 @@ font-family:  Roboto, sans-serif;
     border-radius: 15px  15px 0px 0px;
 }
 
+
 .weatherDiv{
    display:flex;
    justify-content: space-between;
    position: relative;
    align-items: center;
    padding: 20px;
+}
+
+.location{
+    text-align:center;
+    font-size: 0.8rem;
+    margin-top:10px;
+    color:#a0ddd8
+
+}
+
+.locIcon{
+    margin-right:5px
 }
 
 .condition{
@@ -182,7 +195,7 @@ font-family:  Roboto, sans-serif;
 
 
 
-@container  (min-width:301px) and (max-width:452px)
+@container  (min-width:300px) and (max-width:460px)
 {
 
 

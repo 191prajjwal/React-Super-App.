@@ -6,7 +6,10 @@ import humid from "../assets/humid.png";
 import wind from "../assets/wind.png";
 import pressure from "../assets/pressure.png";
 
-
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';   
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
+library.add(fas);
 
 
 export default function WeatherWidget() {
@@ -21,6 +24,8 @@ export default function WeatherWidget() {
       const { condition, humidity, wind_kph, temp_c, pressure_mb } =
         data.current;
 
+        const {name,region}= data.location
+
       setWeatherData({
         text: condition.text,
         icon: condition.icon,
@@ -28,6 +33,8 @@ export default function WeatherWidget() {
         wind: wind_kph,
         temperature: temp_c,
         pressure: pressure_mb,
+        city:name,
+        region:region,
         date: new Date().getDate().toString().padStart(2, "0"),
         month: new Date().getMonth().toString().padStart(2, "0"),
         year: new Date().getFullYear(),
@@ -41,7 +48,7 @@ export default function WeatherWidget() {
   return (
     <div className={styles.container}>
       <div className={styles.timeStamp}>
-        <p>{`${weatherData?.date}-${weatherData.month}-${weatherData?.year}`}</p>
+        <p>{`${weatherData?.date}-${weatherData?.month}-${weatherData?.year}`}</p>
         <p>
           {new Date()
             .toLocaleTimeString("en-IN", {
@@ -51,10 +58,15 @@ export default function WeatherWidget() {
             })
             .toLocaleUpperCase()}
         </p>
+     
       </div>
 
+     
       <div className={styles.weatherInfo}>
+              <div className={styles.location}> <FontAwesomeIcon className={styles.locIcon} icon="fa-solid fa-location-dot" /> 
+              <span  className={styles.region}>{`${weatherData?.city}-${weatherData?.region}`}</span></div>
         {weatherData ? (
+          
           <div className={styles.weatherDiv}>
             <div className={styles.condition}>
               <img

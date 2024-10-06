@@ -73,11 +73,12 @@ border-radius: 20px;
     .right{
      
         gap:10px;
+       
         
     }
 
     .user p{
-     font-size: smaller;
+     font-size: 0.75rem;
     }
 
 

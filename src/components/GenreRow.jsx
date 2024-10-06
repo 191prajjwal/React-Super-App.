@@ -36,7 +36,7 @@ const [data,setData]= useState([])
     <div className={styles.container}>
         <div className={styles.movies}>
           {data.map((movie,index)=>{
-            return (<img key={index} className={styles.movie} src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>)
+            return (<img key={index} className={styles.movie} title={movie.title} src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>)
           })}
         </div>
 
