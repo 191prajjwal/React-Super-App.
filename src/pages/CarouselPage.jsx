@@ -3,7 +3,12 @@ import styles from './CarouselPage.module.css'
 import ProfileWidget from '../components/ProfileWidget'
 import WeatherWidget from '../components/WeatherWidget'
 import NewsWidget from '../components/NewsWidget'
-export default function CarouselPage() {
+import { useNavigate } from 'react-router-dom'
+export default function CarouselPage() 
+
+{
+
+  const navigate= useNavigate()
   return (
     <div className={styles.container}>
 
@@ -20,6 +25,8 @@ export default function CarouselPage() {
 	<div className={styles.newsWidget}>
     <NewsWidget/>
   </div>
+
+  <button className={styles.btn} onClick={()=>navigate("/dashboard")}>Go to Dashboard</button>
     </div>
   )
 }

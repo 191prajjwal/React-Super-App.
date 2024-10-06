@@ -1,7 +1,7 @@
 import styles from './Form.module.css'
 import React, { useState } from 'react'
 
-//we are 
+
 
 export default function Form({name,setName,username,setUserName,email,setEmail,mobile,setMobile,error,setError,handleSubmit}) {
  

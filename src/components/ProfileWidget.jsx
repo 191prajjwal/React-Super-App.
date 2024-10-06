@@ -8,9 +8,9 @@ export default function ProfileWidget() {
   return (
     <div className={styles.container}>
 
-        <div className={styles.left}>
-            <img src={avatar} alt="avatar" />
-        </div>
+        
+            <img className={styles.left} src={avatar} alt="avatar" />
+       
 
         <div className={styles.right}>
             <div className={styles.user}>

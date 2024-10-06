@@ -7,22 +7,31 @@ import GenrePage from './pages/GenrePage'
 import CarouselPage from './pages/CarouselPage'
 import Dashboard from './pages/Dashboard'
 import MoviePage from './pages/MoviePage'
+import ProtectedRoutes from './protectedRoute/ProtectedRoutes'
 
 function App() {
  
-
   return (
     <>
       
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<RegisterPage/>}/>
+        <Route path="/" element= <ProtectedRoutes>
+          <GenrePage/>
+        </ProtectedRoutes>/>
         <Route path="/register" element={<RegisterPage/>}/>
-        <Route path="/home" element={<RegisterPage/>}/>
-        <Route path="/genres" element={<GenrePage/>}/>
-        <Route path="/carousel" element={<CarouselPage/>}/>
-        <Route path="/dashboard" element={<Dashboard/>}/>
-        <Route path="/movies" element={<MoviePage/>}/>
+        <Route path="/genres" element=<ProtectedRoutes>
+          <GenrePage/>
+        </ProtectedRoutes>/>
+        <Route path="/carousel" element=<ProtectedRoutes>
+        <CarouselPage/>
+      </ProtectedRoutes>/>
+        <Route path="/dashboard" element=<ProtectedRoutes>
+        <Dashboard/>
+      </ProtectedRoutes>/>
+        <Route path="/movies" element=<ProtectedRoutes>
+        <MoviePage/>
+      </ProtectedRoutes>/>
         <Route path="*" element={<NotFoundPage/>}/>
         {/* if no page matches any above page the route will be this */}
       </Routes>

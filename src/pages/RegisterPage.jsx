@@ -14,6 +14,7 @@ export default function RegisterPage() {
   const [email,setEmail]= useState(user?.email)
   const [mobile,setMobile]= useState(user?.mobile)
   const [error,setError]= useState({})
+  //checkbox logic
 
 //navigate
 const navigate= useNavigate()

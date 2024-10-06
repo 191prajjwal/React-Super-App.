@@ -19,6 +19,9 @@ export default function Dashboard() {
 	<div className={styles.notesWidget}><NotesWidget/></div>
 	<div className={styles.newsWidget}><NewsWidget/></div>
 
+
+    
+
 </div>
   )
 }
