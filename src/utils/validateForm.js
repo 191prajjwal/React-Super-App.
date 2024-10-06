@@ -10,7 +10,7 @@ export default function validateForm(name,email,username,mobile,isChecked){
         isChecked:false
 
     }
-    console.log(name,email,username,mobile,isChecked)
+  
 
     //to validate empty inputs fields
     if(!name || !email || !username || !mobile || !isChecked)
@@ -21,16 +21,15 @@ export default function validateForm(name,email,username,mobile,isChecked){
         invalid.mobile=!mobile,
         invalid.isChecked=!isChecked
 
-        console.log("all fields are mandatory but some fields are missing")
+       
 
-        console.log(valid,invalid)
         return {
             valid,invalid
         }
 
     }
 
-    console.log("all fields are present")
+   
 
     //Regular expression to check email is valid email and mobile no is 10 digit valid mobile no or not
     const emailRegEx=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
@@ -42,8 +41,8 @@ export default function validateForm(name,email,username,mobile,isChecked){
                  mobile:!mobileRegEx.test(mobile)
         }
         
-        console.log("email or mobile is false")
-        console.log(valid,invalid)
+       
+       
         return {
             valid,invalid
         }
@@ -51,7 +50,7 @@ export default function validateForm(name,email,username,mobile,isChecked){
 
     //returning valid as true and all invalid.property as false if no input field is empty and email and mobile are in correct form 
     
-    console.log(valid,invalid)
+   
     return {
         valid, invalid
     

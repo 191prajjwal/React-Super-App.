@@ -11,7 +11,6 @@ export default function NewsWidget() {
 
   
      fetchNews().then((data)=>{
-      console.log(data)
       const randomIndex= Math.floor(Math.random()*(data.articles.length))
       setNewsData(data.articles[randomIndex])
     })

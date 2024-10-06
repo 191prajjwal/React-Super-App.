@@ -20,7 +20,7 @@ export default function WeatherWidget() {
 
   useEffect(() => {
     const data = fetchWeather().then((data) => {
-      console.log(data);
+      
       const { condition, humidity, wind_kph, temp_c, pressure_mb } =
         data.current;
 

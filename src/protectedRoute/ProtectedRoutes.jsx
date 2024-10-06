@@ -6,7 +6,6 @@ import { Navigate } from 'react-router-dom';
 export default function ProtectedRoutes({children}) {
 
     const {user,selectedGenres}= useContext(AppContext)
-console.log(children.type.name)
 
 if(children.type.name==="Dashboard" || children.type.name==="CarouselPage" || children.type.name==="MoviePage" )
 {

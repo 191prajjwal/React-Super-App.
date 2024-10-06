@@ -18,7 +18,7 @@ const [data,setData]= useState([])
 
          const{results}=data
 
-         console.log(results.slice(0,4)[0])
+       
 
          
 
