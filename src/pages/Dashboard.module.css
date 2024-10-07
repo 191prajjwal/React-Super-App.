@@ -55,6 +55,7 @@ top:15px;
 right:5%;
 transition: transform 0.18s;
 
+
 &:hover{
 	transform:scale(0.9);
 	background-color: #1a691b;
