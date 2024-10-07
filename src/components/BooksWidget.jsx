@@ -26,7 +26,7 @@ const BooksWidget = () => {
     
    
         <div className={styles.container}>
-        <div className={styles.header}>
+            {!book?"Loading......":( <div className={styles.header}>
           <p className={styles.recommend}> Recommended Book</p>
             <img
                   src={book?.volumeInfo.imageLinks?.smallThumbnail}
@@ -39,9 +39,11 @@ const BooksWidget = () => {
                 <p>Author: {book?.volumeInfo.authors ? book.volumeInfo.authors.join(", ") : "Unknown"}</p>
        </div> 
   
-      </div>
-        <article>Description: {truncateDescription(book?.volumeInfo.description, 70)}</article>
-       <Link to={book?.volumeInfo.canonicalVolumeLink } target="_blank">Read more</Link>
+      </div>)}
+       
+       {!book?"":( <article>Description: {truncateDescription(book?.volumeInfo.description, 70)}</article>)}
+       {!book?"":( <Link to={book?.volumeInfo.canonicalVolumeLink } target="_blank">Read more</Link>)}
+       
       </div>
         
   );
