@@ -2,8 +2,8 @@ import React from 'react'
 import styles from './CarouselPage.module.css'
 import ProfileWidget from '../components/ProfileWidget'
 import WeatherWidget from '../components/WeatherWidget'
-import NewsWidget from '../components/NewsWidget'
 import { useNavigate } from 'react-router-dom'
+import BooksWidget from '../components/BooksWidget'
 export default function CarouselPage() 
 
 {
@@ -11,6 +11,7 @@ export default function CarouselPage()
   const navigate= useNavigate()
   return (
     <div className={styles.container}>
+      <button className={styles.btn} onClick={()=>navigate("/dashboard")}>Go to Dashboard</button>
 
 	<div className={styles.profileWidget}>
         <ProfileWidget/>
@@ -22,11 +23,11 @@ export default function CarouselPage()
   </div>
 
 
-	<div className={styles.newsWidget}>
-    <NewsWidget/>
+	<div className={styles.booksWidget}>
+    <BooksWidget/>
   </div>
 
-  <button className={styles.btn} onClick={()=>navigate("/dashboard")}>Go to Dashboard</button>
+  
     </div>
   )
 }

@@ -3,7 +3,7 @@ import  styles  from './NotesWidget.module.css';
 
 
 export default function NotesWidget() {
-    const [notes,setNotes]=useState(JSON.parse(localStorage.getItem("notes")))
+    const [notes,setNotes]=useState(JSON.parse(localStorage.getItem("notes")) || "")
 
   
     useEffect(()=>{
