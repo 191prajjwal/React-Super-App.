@@ -1,45 +1,37 @@
-import styles from "./GenreRow.module.css"
- 
-import fetchMoviesByGenre from "../api/fetchMovies"
-import { useEffect, useState } from "react"
+import styles from "./GenreRow.module.css";
 
-const genreIDs=[28,18,10749,53,37,27,14,10402,878]
+import fetchMoviesByGenre from "../api/fetchMovies";
+import { useEffect, useState } from "react";
 
-export default function GenreRow({genreIndex}) {
+const genreIDs = [28, 18, 10749, 53, 37, 27, 14, 10402, 878];
 
-const [data,setData]= useState([])
+export default function GenreRow({ genreIndex }) {
+  const [data, setData] = useState([]);
 
-    const genreID= genreIDs[genreIndex];
+  const genreID = genreIDs[genreIndex];
 
-    const movieInfo=[]
-    useEffect(()=>{
+  useEffect(() => {
+    fetchMoviesByGenre(genreID).then((data) => {
+      const { results } = data;
 
-        fetchMoviesByGenre(genreID).then((data)=>{
+      setData(results);
+    });
+  }, []);
 
-         const{results}=data
-
-       
-
-         
-
-            setData(results)
-
-
-           
-      
-          
-        })
-    },[])
-
-   
   return (
     <div className={styles.container}>
-        <div className={styles.movies}>
-          {data.map((movie,index)=>{
-            return (<img key={index} className={styles.movie} title={movie.title} src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>)
-          })}
-        </div>
-
+      <div className={styles.movies}>
+        {data.map((movie, index) => {
+          return (
+            <img
+              key={index}
+              className={styles.movie}
+              title={movie.title}
+              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            />
+          );
+        })}
+      </div>
     </div>
-  )
+  );
 }

@@ -18,7 +18,7 @@ export default function TimerWidget() {
     const [isRunning,setIsrunning]=useState(false)
     useEffect(()=>{
 
-//look below here
+
 if(secondsState===0)
    {
     setIsrunning(false)

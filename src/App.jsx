@@ -8,7 +8,7 @@ import CarouselPage from './pages/CarouselPage'
 import Dashboard from './pages/Dashboard'
 import MoviePage from './pages/MoviePage'
 import ProtectedRoutes from './protectedRoute/ProtectedRoutes'
-import BooksWidget from './components/BooksWidget'
+
 
 function App() {
  
