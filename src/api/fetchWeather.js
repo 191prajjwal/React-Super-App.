@@ -1,23 +1,48 @@
-import axios from 'axios'
+import axios from 'axios';
 
-const BASE_URL= "https://api.weatherapi.com/v1"
+const BASE_URL = "https://api.weatherapi.com/v1";
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
-const API_KEY= import.meta.env.VITE_WEATHER_API_KEY 
-
-export async function fetchWeather(city="Bengaluru"){
-
-   
+export async function fetchWeather() {
     try {
-        const {data}=await axios.get(`${BASE_URL}/current.json`,{
-            params:{
-                key:API_KEY,
+       
+        const getPosition = () => {
+            return new Promise((resolve, reject) => {
+                navigator.geolocation.getCurrentPosition(resolve, reject);
+            });
+        };
+
+        const position = await getPosition();
+        const { latitude, longitude } = position.coords;
+        const city='bengaluru'
+        const { data } = await axios.get(`${BASE_URL}/current.json`, {
+            params: {
+                key: API_KEY,
+                q: latitude!=null && longitude!=null?`${latitude},${longitude}`:city
+            }
+        });
+
+        return data;
+    } catch (error) {
+
+        
+
+        console.log(error)
+
+        if(error.code===1)
+            
+    {
+        const city='bengaluru'
+        const { data } = await axios.get(`${BASE_URL}/current.json`, {
+            params: {
+                key: API_KEY,
                 q:city
             }
-        })
-
+        });
         return data
-    } catch (error) {
-        console.error(error)
     }
+       
 
+    else console.log(error)
+    }
 }

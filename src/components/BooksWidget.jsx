@@ -16,32 +16,34 @@ const BooksWidget = () => {
 
   useEffect(() => {
     fetchBooks().then((response) => {
-      console.log(response.data.items);
       const randomIndex =  Math.floor(Math.random()*10)
-      console.log(randomIndex)
       setBook(response.data.items ? response.data.items[randomIndex] : null); 
     });
   }, []); 
 
   return (
-    <div className={styles.container}>
-      <div className={styles.header}>
-        <p className={styles.recommend}> Recommended Book</p>
-          <img
-                src={book?.volumeInfo.imageLinks?.smallThumbnail}
-                alt={book?.volumeInfo.title}
-               
-              />
 
-     <div className={styles.about}>
-              <h3>{book?.volumeInfo.title}</h3>
-              <p>Author: {book?.volumeInfo.authors ? book.volumeInfo.authors.join(", ") : "Unknown"}</p>
-     </div> 
-
-    </div>
-      <article>Description: {truncateDescription(book?.volumeInfo.description, 70)}</article>
-     <Link to={book?.volumeInfo.canonicalVolumeLink } target="_blank">Read more</Link>
-    </div>
+    
+   
+        <div className={styles.container}>
+        <div className={styles.header}>
+          <p className={styles.recommend}> Recommended Book</p>
+            <img
+                  src={book?.volumeInfo.imageLinks?.smallThumbnail}
+                  alt={book?.volumeInfo.title}
+                 
+                />
+  
+       <div className={styles.about}>
+                <h3>{book?.volumeInfo.title}</h3>
+                <p>Author: {book?.volumeInfo.authors ? book.volumeInfo.authors.join(", ") : "Unknown"}</p>
+       </div> 
+  
+      </div>
+        <article>Description: {truncateDescription(book?.volumeInfo.description, 70)}</article>
+       <Link to={book?.volumeInfo.canonicalVolumeLink } target="_blank">Read more</Link>
+      </div>
+        
   );
 };
 
