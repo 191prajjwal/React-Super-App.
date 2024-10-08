@@ -8,19 +8,14 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://drive.google.com/file/d/18ZWpJtxEnxgK9bA0ExajjlpSa7nhqWZV/view?usp=sharing" alt="project-screenshot" width="500px" height="500px/">
+![Project Screenshot](./public/login.png)
+![Project Screenshot](./public/genres.png)
+![Project Screenshot](./public/carousel.png)
+![Project Screenshot](./public/dashboard.png)
+![Project Screenshot](./public/moviePage.png)
+![Project Screenshot](./public/error.png)
 
-<img src="https://drive.google.com/file/d/1JRZzsCRRZzahoHN4e2GxEvoPs65dWjI-/view?usp=sharing" alt="project-screenshot" width="500px" height="500px/">
 
-<img src="https://drive.google.com/file/d/1MYYYN0kYXEhwOzF3l7zeoWlEI_-p8XpX/view?usp=sharing" alt="project-screenshot" width="500px" height="500px/">
-
-<img src="https://drive.google.com/file/d/1ttOZA8PFitcgOZiPe9DwE46jtwb9HukO/view?usp=sharing" alt="project-screenshot" width="500px" height="500px/">
-
-<img src="https://drive.google.com/file/d/1Ia3k-_Ejg0Rq0m2rXMc-4I_-jHcde6b6/view?usp=sharing" alt="project-screenshot" width="500px" height="500px/">
-
-<img src="https://drive.google.com/file/d/1j-WV_LyFqrL9HHtJCy7-CGDv-Dsenh-D/view?usp=sharing" alt="project-screenshot" width="500px" height="500ox/">
-
-  
   
 <h2>🧐 Features</h2>
 
