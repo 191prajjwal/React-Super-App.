@@ -12,7 +12,7 @@
 ![Project Screenshot](./public/genres.png)
 ![Project Screenshot](./public/carousel.png)
 ![Project Screenshot](./public/dashboard.png)
-![Project Screenshot](./public/moviePage.png)
+![Project Screenshot](./public/movie.png)
 ![Project Screenshot](./public/error.png)
 
 
