@@ -12,13 +12,19 @@ export default function CarouselPage()
 
   function handleLogOut(){
 
-    localStorage.clear()
+    const isLogout=confirm("Are you sure you want to log out?")
+
+    if(isLogout)
+   { localStorage.clear()
+    window.location.href="/register"
+   }
+  else
+  return
     
 
   }
   return (
     <div className={styles.container}>
-     <div className={styles.nav}>
     
 
 <button className={styles.backbtn} onClick={()=>navigate("/genres")}>Back</button>
@@ -26,8 +32,8 @@ export default function CarouselPage()
 <button className={styles.btn} onClick={()=>navigate("/dashboard")}>Go to Dashboard</button>
 
 
-<a className={styles.logout} onClick={handleLogOut} href="/register"> Logout</a>
-     </div>
+<button className={styles.logout} onClick={handleLogOut} > Logout</button>
+    
 
 	<div className={styles.profileWidget}>
         <ProfileWidget/>

@@ -21,20 +21,6 @@
     padding:10px;
 }
 
-
-.nav{
-
-	
-	
-    display: flex;
-	justify-content: space-between;
-	position:absolute;
-	width:100%;
-	padding:5px;
-	background-color: rgb(25, 26, 25);
-
-}
-
 .btn{
 padding:5px 30px;
 border-radius: 15px;
@@ -42,9 +28,10 @@ background-color: #72DB73;
 border:none;
 color:white;
 font-weight: bold;
-/* position: absolute; */
+position: absolute;
 
-
+top:15px;
+left:35%;
 transition: transform 0.18s;
 
 &:hover{
@@ -57,7 +44,27 @@ transition: transform 0.18s;
 }
 
 
+.backbtn{
 
+	padding:5px 30px;
+	border-radius: 15px;
+	background-color: #72DB73;
+	border:none;
+	color:white;
+	font-weight: bold;
+	position: absolute;
+	top:15px;
+	left:10%;
+	transition: transform 0.18s;
+	
+	&:hover{
+		transform:scale(0.9);
+		background-color: #1a691b;
+	}
+	
+	
+
+}
 
 .logout{
 	padding:5px 30px;
@@ -66,10 +73,9 @@ transition: transform 0.18s;
 	border:none;
 	color:white;
 	font-weight: bold;
-	
-	
+	position: absolute;
 	top:15px;
-	right:5%;
+	right:10%;
 	transition: transform 0.18s;
 	
 	&:hover{
@@ -78,30 +84,10 @@ transition: transform 0.18s;
 	}
 	
 	
-	
 	}
 
 
-	.backbtn{
-
-		padding:5px 30px;
-	border-radius: 15px;
-	background-color: #72DB73;
-	border:none;
-	color:white;
-	font-weight: bold;
 	
-	
-	
-	
-	transition: transform 0.18s;
-	
-	&:hover{
-		transform:scale(0.9);
-		background-color: #1a691b;
-	}
-
-	}
 
 
 @media screen  and (min-width:800px){
@@ -119,7 +105,4 @@ transition: transform 0.18s;
 	   position: relative;
         
     }
-
-
-	
 }
