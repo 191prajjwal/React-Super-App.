@@ -6,6 +6,12 @@
 
 [https://react-super-app-ebon.vercel.app/](https://react-super-app-ebon.vercel.app/)
 
+
+<h2> Caution:</h2>
+
+To resolve occasional issues with the TMDB API not loading movie data, please go to your browser's settings, navigate to Privacy and Security, and change the DNS to Google or Cloudflare. This should fix the problem.
+
+
 <h2>Project Screenshots:</h2>
 
 ![Project Screenshot](./public/login.png)
@@ -76,3 +82,4 @@ Technologies used in the project:
 <h2>🛡️ License:</h2>
 
 This project is licensed under the MIT License.
+
