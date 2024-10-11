@@ -9,9 +9,25 @@ export default function CarouselPage()
 {
 
   const navigate= useNavigate()
+
+  function handleLogOut(){
+
+    localStorage.clear()
+    
+
+  }
   return (
     <div className={styles.container}>
-      <button className={styles.btn} onClick={()=>navigate("/dashboard")}>Go to Dashboard</button>
+     <div className={styles.nav}>
+    
+
+<button className={styles.backbtn} onClick={()=>navigate("/genres")}>Back</button>
+
+<button className={styles.btn} onClick={()=>navigate("/dashboard")}>Go to Dashboard</button>
+
+
+<a className={styles.logout} onClick={handleLogOut} href="/register"> Logout</a>
+     </div>
 
 	<div className={styles.profileWidget}>
         <ProfileWidget/>
